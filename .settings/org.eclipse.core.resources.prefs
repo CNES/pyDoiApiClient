@@ -1,0 +1,11 @@
+eclipse.preferences.version=1
+encoding//python-client/setup.py=utf-8
+encoding//python-client/swagger_client/__init__.py=utf-8
+encoding//python-client/swagger_client/api/citation_api.py=utf-8
+encoding//python-client/swagger_client/api/mds_api.py=utf-8
+encoding//python-client/swagger_client/api_client.py=utf-8
+encoding//python-client/swagger_client/configuration.py=utf-8
+encoding//python-client/swagger_client/rest.py=utf-8
+encoding//python-client/test/test_citation_api.py=utf-8
+encoding//python-client/test/test_mds_api.py=utf-8
+encoding//python-client/test/test_util.py=utf-8
