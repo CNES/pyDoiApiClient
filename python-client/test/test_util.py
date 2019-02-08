@@ -32,72 +32,72 @@ class TestUtil:
         return "ar"    
         
     def doi_metadata():
-            metadata = '''
-            <?xml version="1.0" encoding="UTF-8"?>
-<resource xmlns="http://datacite.org/schema/kernel-4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <identifier identifierType="DOI">10.5072/828606/8C3E91AD45CA855B477126BC073AE44B</identifier>
-    <creators>
-        <creator>
-            <creatorName>CNES</creatorName>
-        </creator>
-        <creator>
-            <creatorName>LATMOS</creatorName>
-        </creator>
-    </creators>
-    <titles>
-        <title>J1_105min_Pacific_Nominal_MacroCycle</title>
-    </titles>
-    <publisher>CNES</publisher>
-    <publicationYear>2017</publicationYear>
-    <resourceType resourceTypeGeneral="Dataset"/>
-    <subjects>
-        <subject>
-                                CFOSAT simulated data.
-                            </subject>
-    </subjects>
-    <contributors>
-        <contributor contributorType="Producer">
-            <contributorName>CNES</contributorName>
-        </contributor>
-        <contributor contributorType="Producer">
-            <contributorName>LATMOS</contributorName>
-        </contributor>
-        <contributor contributorType="RightsHolder">
-            <contributorName>CNES</contributorName>
-        </contributor>
-        <contributor contributorType="ResearchGroup">
-            <contributorName>METEO-FRANCE</contributorName>
-        </contributor>
-        <contributor contributorType="ResearchGroup">
-            <contributorName>IFREMER</contributorName>
-        </contributor>
-    </contributors>
-    <dates>
-        <date dateType="Created">2017-06-01</date>
-    </dates>
-    <language>en</language>
-    <alternateIdentifiers>
-        <alternateIdentifier alternateIdentifierType="SEF identifier">J1_105min_Pacific_Nominal_MacroCycle</alternateIdentifier>
-    </alternateIdentifiers>
-    <relatedIdentifiers>
-        <relatedIdentifier relatedIdentifierType="URL" relationType="IsDocumentedBy">https://cfosat-sef.cnes.fr/cnes_to_cfosat/documents/Product_Format_Description.pdf</relatedIdentifier>
-        <relatedIdentifier relatedIdentifierType="URL" relationType="IsDocumentedBy">https://cfosat-sef.cnes.fr/cnes_to_cfosat/documents/Product_Users_Guide.pdf</relatedIdentifier>
-        <relatedIdentifier relatedIdentifierType="URL" relationType="IsDocumentedBy">https://cfosat-sef.cnes.fr/cnes_to_cfosat/documents/SWIM_Instrument_Manual.pdf</relatedIdentifier>
-    </relatedIdentifiers>
-    <sizes>
-        <size>1.5 GB</size>
-    </sizes>
-    <formats>
-        <format>application/x-netcdf</format>
-    </formats>
-    <version>0.1</version>
-    <geoLocations>
-        <geoLocation>
-            <geoLocationPlace>Pacific</geoLocationPlace>
-        </geoLocation>
-    </geoLocations>
-</resource>
-            '''
+            metadata = """<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+            <resource xmlns=\"http://datacite.org/schema/kernel-4\" 
+                      xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" 
+                      xsi:schemaLocation=\"http://schema.datacite.org/meta/kernel-4/metadata.xsd\"> 
+                <identifier identifierType=\"DOI\">10.5072/828606/8c3e91ad45ca855b477126bc073ae44b</identifier> 
+                <creators> 
+                    <creator> 
+                        <creatorName>CNES</creatorName> 
+                   </creator> 
+                    <creator> 
+                        <creatorName>LATMOS</creatorName> 
+                    </creator> 
+                </creators> 
+                <titles> 
+                    <title>J1_105min_Pacific_Nominal_MacroCycle</title> 
+                </titles> 
+                <publisher>CNES</publisher> 
+                <publicationYear>2017</publicationYear> 
+                <resourceType resourceTypeGeneral=\"Dataset\"></resourceType> 
+                <subjects> 
+                    <subject> 
+                        CFOSAT simulated data. 
+                    </subject> 
+                </subjects> 
+                <contributors> 
+                    <contributor contributorType=\"Producer\"> 
+                        <contributorName>CNES</contributorName> 
+                    </contributor>        
+                    <contributor contributorType=\"Producer\"> 
+                        <contributorName>LATMOS</contributorName> 
+                    </contributor> 
+                    <contributor contributorType=\"RightsHolder\"> 
+                        <contributorName>CNES</contributorName> 
+                    </contributor> 
+                    <contributor contributorType=\"ResearchGroup\"> 
+                        <contributorName>METEO-FRANCE</contributorName> 
+                    </contributor>        
+                    <contributor contributorType=\"ResearchGroup\"> 
+                        <contributorName>IFREMER</contributorName> 
+                    </contributor>           
+                </contributors> 
+                <dates> 
+                    <date dateType=\"Created\">2017-06-01</date> 
+                </dates> 
+                <language>en</language> 
+                <alternateIdentifiers> 
+                    <alternateIdentifier alternateIdentifierType=\"SEF identifier\">J1_105min_Pacific_Nominal_MacroCycle</alternateIdentifier> 
+                </alternateIdentifiers> 
+                <relatedIdentifiers> 
+                    <relatedIdentifier relatedIdentifierType=\"URL\" relationType=\"IsDocumentedBy\">https://cfosat-sef.cnes.fr/cnes_to_cfosat/documents/Product_Format_Description.pdf</relatedIdentifier> 
+                    <relatedIdentifier relatedIdentifierType=\"URL\" relationType=\"IsDocumentedBy\">https://cfosat-sef.cnes.fr/cnes_to_cfosat/documents/Product_Users_Guide.pdf</relatedIdentifier> 
+                    <relatedIdentifier relatedIdentifierType=\"URL\" relationType=\"IsDocumentedBy\">https://cfosat-sef.cnes.fr/cnes_to_cfosat/documents/SWIM_Instrument_Manual.pdf</relatedIdentifier> 
+                </relatedIdentifiers> 
+                <sizes> 
+                    <size>1.5 GB</size> 
+                </sizes> 
+                <formats> 
+                    <format>application/x-netcdf</format> 
+                </formats> 
+                <version>0.1</version> 
+                <geoLocations> 
+                    <geoLocation> 
+                        <geoLocationPlace>Pacific</geoLocationPlace> 
+                    </geoLocation> 
+                </geoLocations> 
+            </resource>"""
             return metadata;
     
     def doi_media():
@@ -107,4 +107,4 @@ class TestUtil:
          return "http://example.org/"
      
     def doi_languages(): 
-          return ['af-ZA', 'ar', 'bg-BG', 'ca-AD', 'cs-CZ', 'cy-GB', 'da-DK', 'de-AT', 'de-CH', 'de-DE', 'el-GR', 'en-GB', 'en-US', 'es-CL', 'es-ES', 'es-MX', 'et-EE', 'eu', 'fa-IR', 'fi-FI', 'fr-CA', 'fr-FR', 'he-IL', 'hr-HR', 'hu-HU', 'id-ID', 'is-IS', 'it-IT', 'ja-JP', 'km-KH', 'ko-KR', 'lt-LT', 'lv-LV', 'mn-MN', 'nb-NO', 'nl-NL', 'nn-NO', 'pl-PL', 'pt-BR', 'pt-PT', 'ro-RO', 'ru-RU', 'sk-SK', 'sl-SI', 'sr-RS', 'sv-SE', 'th-TH', 'tr-TR', 'uk-UA', 'vi-VN', 'zh-CN', 'zh-TW']
+          return ['af-ZA', 'ar', 'bg-BG', 'ca-AD', 'cs-CZ', 'cy-GB', 'da-DK', 'de-AT', 'de-CH', 'de-DE', 'el-GR', 'en-GB', 'en-US', 'es-CL', 'es-ES', 'es-MX', 'et-EE', 'eu', 'fa-IR', 'fi-FI', 'fr-CA', 'fr-FR', 'he-IL', 'hr-HR', 'hu-HU', 'id-ID', 'is-IS', 'it-IT', 'ja-JP', 'km-KH', 'ko-KR', 'la', 'lt-LT', 'lv-LV', 'mn-MN', 'nb-NO', 'nl-NL', 'nn-NO', 'pl-PL', 'pt-BR', 'pt-PT', 'ro-RO', 'ru-RU', 'sk-SK', 'sl-SI', 'sr-RS', 'sv-SE', 'th-TH', 'tr-TR', 'uk-UA', 'vi-VN', 'zh-CN', 'zh-TW']

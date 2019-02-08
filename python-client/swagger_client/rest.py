@@ -19,8 +19,6 @@ import logging
 import re
 import ssl
 
-import configuration
-
 import certifi
 # python 2 and python 3 compatibility library
 import six
