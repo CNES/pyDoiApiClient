@@ -19,13 +19,17 @@ from test_util import TestUtil
 import swagger_client
 from swagger_client.api.citation_api import CitationApi  # noqa: E501
 from swagger_client.rest import ApiException
+from swagger_client.api_client import ApiClient
+from swagger_client.configuration import Configuration
 
 
 class TestCitationApi(unittest.TestCase):
     """CitationApi unit test stubs"""
 
     def setUp(self):
-        self.api = swagger_client.api.citation_api.CitationApi()  # noqa: E501
+        conf = Configuration()
+        conf.host = TestUtil.httpbasePath()
+        self.api = swagger_client.api.citation_api.CitationApi(ApiClient(conf))  # noqa: E501
 
     def tearDown(self):
         pass

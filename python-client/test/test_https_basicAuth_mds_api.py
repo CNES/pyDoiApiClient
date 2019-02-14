@@ -30,10 +30,11 @@ class TestMdsApi(unittest.TestCase):
     def setUp(self):
         # Configure API key authorization: APIKeyHeader
         configuration = swagger_client.Configuration()
-        configuration.api_key['Authorization'] = 'eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIke3Byb2plY3QuYXJ0aWZhY3RJZH0iLCJpYXQiOjE1NDk0NjE0MzgsInN1YiI6InRlc3QiLCJwcm9qZWN0SUQiOjgyODYwNiwicHJvamVjdE5hbWUiOiJDRk9TQVQiLCJleHAiOjQ3MDUxMzUwMzh9.XDAtZIXbXNlbq4PE4RLNEnJC8mGtU7oFgjq7BWoIAQM'
+        configuration.host = TestUtil.httpsbasePath()
+        configuration.api_key['Authorization'] = 'user:password'
         # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-        configuration.api_key_prefix['Authorization'] = 'Bearer'
-        self.api = swagger_client.api.mds_api.MdsApi()  # noqa: E501
+        configuration.api_key_prefix['Authorization'] = 'Basic'
+        self.api = swagger_client.api.mds_api.MdsApi(swagger_client.ApiClient(configuration))  # noqa: E501
 
     def tearDown(self):
         pass

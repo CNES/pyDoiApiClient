@@ -51,7 +51,8 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
         config = configparser.ConfigParser()
         config.read([os.path.join(os.path.abspath(os.path.dirname(__file__)),'clientApi.cfg')])
         # Default Base url
-        self.host = config['APIClientConf']['apiBasePath']
+        host = config['APIClientConf']['apiBasePath']
+        self.host = host  
         # Temp file folder for downloading files
         self.temp_folder_path = None
 
