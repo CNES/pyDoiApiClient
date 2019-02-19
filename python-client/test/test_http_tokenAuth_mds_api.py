@@ -19,6 +19,7 @@ from test_util import TestUtil
 import swagger_client
 from swagger_client.api.mds_api import MdsApi  # noqa: E501
 from swagger_client.rest import ApiException
+from swagger_client.configuration import Configuration
 #from Tools.scripts.objgraph import ignore
 
 
@@ -29,7 +30,7 @@ class TestMdsApi(unittest.TestCase):
 
     def setUp(self):
         # Configure API key authorization: APIKeyHeader
-        configuration = Configuration(TestUtil.httpbasePath())
+        configuration = Configuration()
         configuration.host = TestUtil.httpbasePath()
         configuration.api_key['Authorization'] = 'eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIke3Byb2plY3QuYXJ0aWZhY3RJZH0iLCJpYXQiOjE1NDk0NjE0MzgsInN1YiI6InRlc3QiLCJwcm9qZWN0SUQiOjgyODYwNiwicHJvamVjdE5hbWUiOiJDRk9TQVQiLCJleHAiOjQ3MDUxMzUwMzh9.XDAtZIXbXNlbq4PE4RLNEnJC8mGtU7oFgjq7BWoIAQM'
         # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed

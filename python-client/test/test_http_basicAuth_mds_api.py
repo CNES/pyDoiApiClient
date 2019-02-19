@@ -20,8 +20,8 @@ import swagger_client
 from swagger_client.api.mds_api import MdsApi  # noqa: E501
 from swagger_client.rest import ApiException
 from swagger_client.configuration import Configuration
-
-
+from encodings.base64_codec import base64_encode
+import base64
 #from Tools.scripts.objgraph import ignore
 
 
@@ -34,7 +34,7 @@ class TestMdsApi(unittest.TestCase):
         # Configure API key authorization: APIKeyHeader
         configuration = Configuration()
         configuration.host = TestUtil.httpbasePath()
-        configuration.api_key['Authorization'] = 'user:password'
+        configuration.api_key['Authorization'] = str(base64.b64encode('test:password'.encode(encoding='utf_8', errors='strict')), 'utf_8')
         # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
         configuration.api_key_prefix['Authorization'] = 'Basic'
         self.api = swagger_client.api.mds_api.MdsApi(swagger_client.ApiClient(configuration))  # noqa: E501
