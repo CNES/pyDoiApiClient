@@ -18,7 +18,7 @@ Some modifications were made to the generated code to adapt it to doi server spe
 - API version: 1.0.0
 - Package version: 1.0.0
 - Build package: io.swagger.codegen.languages.PythonClientCodegen
-For more information, please visit [http://atos.net/](http://atos.net/)
+For more information, please visit [https://cnes.github.io/DOI-server](https://cnes.github.io/DOI-server)
 
 ## Requirements.
 
