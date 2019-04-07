@@ -1,7 +1,5 @@
 # coding: utf-8
 
-# flake8: noqa
-
 """
     Doi Server API
 
@@ -15,12 +13,28 @@
 
 from __future__ import absolute_import
 
-# import apis into sdk package
-from swagger_client.api.administration_api import AdministrationApi
-from swagger_client.api.doi_citation_formatter_api import DOICitationFormatterApi
-from swagger_client.api.data_cite_metadata_store__mds_api_api import DataCiteMetadataStoreMDSAPIApi
+import unittest
 
-# import ApiClient
-from swagger_client.api_client import ApiClient
-from swagger_client.configuration import Configuration
-# import models into sdk package
+import swagger_client
+from swagger_client.api.administration_api import AdministrationApi  # noqa: E501
+from swagger_client.rest import ApiException
+
+
+class TestAdministrationApi(unittest.TestCase):
+    """AdministrationApi unit test stubs"""
+
+    def setUp(self):
+        self.api = swagger_client.api.administration_api.AdministrationApi()  # noqa: E501
+
+    def tearDown(self):
+        pass
+
+    def test_create_token(self):
+        """Test case for create_token
+
+        """
+        pass
+
+
+if __name__ == '__main__':
+    unittest.main()
